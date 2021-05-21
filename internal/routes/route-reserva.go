@@ -5,6 +5,6 @@ import (
 	"servidor_http_golang/internal/controllers"
 )
 
-func CreateReservations(route *gin.RouterGroup) {
+func CreateRouteReserva(route *gin.RouterGroup) {
 	route.GET("/reservations", controllers.GetReservations)
 }

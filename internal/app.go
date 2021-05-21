@@ -10,6 +10,6 @@ func DefineRoutes(router *gin.Engine, rotas string) {
 	// main route
 	rotasV1 := router.Group(rotas)
 
-	routes.CreateReservations(rotasV1)
+	routes.CreateRouteReserva(rotasV1)
 
 }
