@@ -12,3 +12,14 @@ func GetReserva() (models.Reserva, error) {
 
 	return data, nil
 }
+
+func UpdateReserva(id, status string) (models.Reserva, error) {
+
+	data := models.Reserva{}
+	data.Id = id
+	data.Status = status
+	data.Template.Metadata.Baremetal.Hostname = "host1"
+	data.Template.Metadata.Baremetal.Image = "ubuntu_18_04"
+
+	return data, nil
+}

@@ -20,3 +20,25 @@ func GetReservations(ctx *gin.Context) {
 	// return reservations.
 	ctx.JSON(http.StatusOK, reserva)
 }
+
+func UpdateReservations(ctx *gin.Context) {
+	var reserva models.Reserva
+
+	// id da reserva.
+	id := ctx.Params.ByName("id")
+
+	// status da reserva.
+	if err := ctx.ShouldBindJSON(&reserva); err != nil {
+		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+	}
+
+	// update reservations in database
+	reserva, err := repositories.UpdateReserva(id, reserva.Status)
+	if err != nil {
+		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	// return reservations.
+	ctx.JSON(http.StatusOK, reserva)
+}
