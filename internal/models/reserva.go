@@ -11,7 +11,7 @@ type Template struct {
 }
 
 type Metadata struct {
-	Baremetal Baremetal `json:"baremetal"`
+	Baremetal []Baremetal `json:"baremetal"`
 }
 
 type Baremetal struct {
