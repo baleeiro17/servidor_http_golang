@@ -8,7 +8,6 @@ import (
 )
 
 func GetReservations(ctx *gin.Context) {
-	var reserva models.Reserva
 
 	// get all reservations in database.
 	reserva, err := repositories.GetReserva()
