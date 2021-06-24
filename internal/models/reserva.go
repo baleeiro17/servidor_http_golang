@@ -3,7 +3,7 @@ package models
 type Reserva struct {
 	Id       string   `json:"_id"`
 	Template Template `json:"template"`
-	Sshkeys  Sshkey   `json:"sshkeys"`
+	Sshkeys  []Sshkey `json:"sshkeys"`
 	Status   string   `json:"status"`
 }
 
