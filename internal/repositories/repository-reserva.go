@@ -15,7 +15,7 @@ func GetReserva() ([]models.Reserva, error) {
 	// baremetal task
 	data[0].Template.Metadata.Baremetal = make([]models.Baremetal, 1)
 	data[0].Template.Metadata.Baremetal[0].Hostname = "host1"
-	data[0].Template.Metadata.Baremetal[0].Image = "ubuntu_18_04"
+	data[0].Template.Metadata.Baremetal[0].Image = "ubuntu_origin"
 
 	// ssh task
 	data[0].Sshkeys = make([]models.Sshkey, 3)
@@ -30,7 +30,7 @@ func GetReserva() ([]models.Reserva, error) {
 	// baremetal task
 	data[1].Template.Metadata.Baremetal = make([]models.Baremetal, 1)
 	data[1].Template.Metadata.Baremetal[0].Hostname = "host2"
-	data[1].Template.Metadata.Baremetal[0].Image = "ubuntu_generic"
+	data[1].Template.Metadata.Baremetal[0].Image = "ubuntu_origin"
 
 	// ssh task
 	data[1].Sshkeys = make([]models.Sshkey, 2)
