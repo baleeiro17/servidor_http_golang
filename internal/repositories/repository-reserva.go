@@ -81,18 +81,26 @@ func GetReserva3() ([]models.Reserva, error) {
 	return data, nil
 }
 
-func UpdateReserva(id, status string) (models.Reserva, error) {
+func UpdateReserva(id string, reserva models.Reserva) (models.Reserva, error) {
 
 	data := models.Reserva{}
 	data.Id = id
-	data.Status = status
+	data.Status = reserva.Status
 	data.Template.Metadata.Baremetal = make([]models.Baremetal, 1)
 	data.Template.Metadata.Baremetal[0].Hostname = "host1"
 	data.Template.Metadata.Baremetal[0].Image = "ubuntu_18_04"
 
-	fmt.Println(id)
-	fmt.Println(status)
-	fmt.Println(status)
+	// number of logs
+	nLog := len(reserva.Logs)
+	data.Logs = make([]models.Log, nLog)
+	for i := 0; i < nLog; i++ {
+		data.Logs[i].Category = reserva.Logs[i].Category
+		data.Logs[i].Host = reserva.Logs[i].Host
+		data.Logs[i].Time = reserva.Logs[i].Time
+		fmt.Println(data.Logs[i].Host)
+		fmt.Println(data.Logs[i].Category)
+		fmt.Println(data.Logs[i].Time)
+	}
 
 	return data, nil
 }

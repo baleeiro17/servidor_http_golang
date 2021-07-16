@@ -32,7 +32,7 @@ func UpdateReservations(ctx *gin.Context) {
 	}
 
 	// update reservations in database
-	reserva, err := repositories.UpdateReserva(id, reserva.Status)
+	reserva, err := repositories.UpdateReserva(id, reserva)
 	if err != nil {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
