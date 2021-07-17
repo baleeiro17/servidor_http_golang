@@ -50,9 +50,9 @@ func GetReserva2() ([]models.Reserva, error) {
 	// baremetal tasks
 	data[0].Template.Metadata.Baremetal = make([]models.Baremetal, 2)
 	data[0].Template.Metadata.Baremetal[0].Hostname = "host1"
-	data[0].Template.Metadata.Baremetal[0].Image = "ubuntu_18_04"
+	data[0].Template.Metadata.Baremetal[0].Image = "ubuntu_origin"
 	data[0].Template.Metadata.Baremetal[1].Hostname = "host2"
-	data[0].Template.Metadata.Baremetal[1].Image = "ubuntu_generic"
+	data[0].Template.Metadata.Baremetal[1].Image = "ubuntu_origin"
 
 	// ssh tasks
 	data[0].Sshkeys = make([]models.Sshkey, 1)
