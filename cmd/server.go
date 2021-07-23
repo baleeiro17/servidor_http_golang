@@ -9,7 +9,7 @@ func main() {
 	router := gin.Default()
 
 	// define as rotas padrões
-	app.DefineRoutes(router, "/api/v1")
+	app.DefineRoutes(router, "")
 
 	// roda o servidor HTTP na porta 8080.
 	router.Run(":8080")
