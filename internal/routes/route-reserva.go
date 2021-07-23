@@ -6,6 +6,6 @@ import (
 )
 
 func CreateRouteReserva(route *gin.RouterGroup) {
-	route.GET("/reservations", controllers.GetReservations)
-	route.PUT("/reservations/:id", controllers.UpdateReservations)
+	route.GET("/reservations/all/waiting_deploy", controllers.GetReservations)
+	route.PUT("reservations/:id/update_logs", controllers.UpdateReservations)
 }
