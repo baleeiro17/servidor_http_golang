@@ -1,6 +1,10 @@
 package models
 
 type Reserva struct {
+	Result []Result `json:"result"`
+}
+
+type Result struct {
 	Id              string      `json:"id"`
 	Host_images     []Baremetal `json:"host_images"`
 	Ssh_public_keys []string    `json:"ssh_public_keys"`
@@ -11,8 +15,8 @@ type Reserva struct {
 type Log struct {
 	Information string `json:"information"`
 	Category    string `json:"category"`
-	Host        string `json:"host"`
-	Time        string `json:"time"`
+	Resource    string `json:"resource"`
+	Time        int64  `json:"time"`
 }
 
 type Baremetal struct {

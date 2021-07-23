@@ -21,7 +21,7 @@ func GetReservations(ctx *gin.Context) {
 }
 
 func UpdateReservations(ctx *gin.Context) {
-	var reserva models.Reserva
+	var reserva models.Result
 
 	// id da reserva.
 	id := ctx.Params.ByName("id")
