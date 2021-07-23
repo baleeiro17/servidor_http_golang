@@ -26,5 +26,5 @@ go build server.go
 
 5- API working in:
 ```
-http://localhost:8080/api/v1/reservations
+http://localhost:8080
 ```
