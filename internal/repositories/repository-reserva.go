@@ -15,11 +15,11 @@ func GetReserva2() (models.Reserva, error) {
 	data.Result[0].Status = "SCHEDULED"
 
 	// baremetal tasks
-	data.Result[0].Host_images = make([]models.Baremetal, 1)
+	data.Result[0].Host_images = make([]models.Baremetal, 2)
 	data.Result[0].Host_images[0].Host = "60f5b2e38298c5795c147e06"
 	data.Result[0].Host_images[0].Image = "60d22b62e8c38ebe76abfb38"
-	// data.Result[0].Host_images[1].Host = "host2"
-	// data.Result[0].Host_images[1].Image = "ubuntu_origin"
+	data.Result[0].Host_images[1].Host = "60f5b2e38298c5795c147e05"
+	data.Result[0].Host_images[1].Image = "60d22b62e8c38ebe76abfb38"
 
 	// ssh tasks
 	data.Result[0].Ssh_public_keys = make([]string, 1)
@@ -34,6 +34,7 @@ func UpdateReserva(id string, reserva models.Result) (models.Result, error) {
 
 	data.Id = id
 	data.Status = reserva.Status
+	fmt.Println("status: ", reserva.Status)
 
 	// number of logs
 	nLog := len(reserva.Logs)
@@ -42,9 +43,9 @@ func UpdateReserva(id string, reserva models.Result) (models.Result, error) {
 		data.Logs[i].Category = reserva.Logs[i].Category
 		data.Logs[i].Resource = reserva.Logs[i].Resource
 		data.Logs[i].Time = reserva.Logs[i].Time
-		fmt.Println(data.Logs[i].Resource)
-		fmt.Println(data.Logs[i].Category)
-		fmt.Println(data.Logs[i].Time)
+		fmt.Println("resource:", data.Logs[i].Resource)
+		fmt.Println("category:", data.Logs[i].Category)
+		fmt.Println("time:", data.Logs[i].Time)
 	}
 
 	return data, nil
