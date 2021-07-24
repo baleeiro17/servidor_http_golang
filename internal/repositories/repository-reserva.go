@@ -15,11 +15,11 @@ func GetReserva2() (models.Reserva, error) {
 	data.Result[0].Status = "SCHEDULED"
 
 	// baremetal tasks
-	data.Result[0].Host_images = make([]models.Baremetal, 2)
-	data.Result[0].Host_images[0].Host = "host1"
-	data.Result[0].Host_images[0].Image = "ubuntu_origin"
-	data.Result[0].Host_images[1].Host = "host2"
-	data.Result[0].Host_images[1].Image = "ubuntu_origin"
+	data.Result[0].Host_images = make([]models.Baremetal, 1)
+	data.Result[0].Host_images[0].Host = "60f5b2e38298c5795c147e06"
+	data.Result[0].Host_images[0].Image = "60d22b62e8c38ebe76abfb38"
+	// data.Result[0].Host_images[1].Host = "host2"
+	// data.Result[0].Host_images[1].Image = "ubuntu_origin"
 
 	// ssh tasks
 	data.Result[0].Ssh_public_keys = make([]string, 1)
