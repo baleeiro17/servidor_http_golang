@@ -10,7 +10,7 @@ import (
 func GetReservations(ctx *gin.Context) {
 
 	// get all reservations in database.
-	reserva, err := repositories.GetReserva2()
+	reserva, err := repositories.GetReserva()
 	if err != nil {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
