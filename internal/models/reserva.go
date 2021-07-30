@@ -7,7 +7,7 @@ type Reserva struct {
 type Result struct {
 	Id              string      `json:"id"`
 	Host_images     []Baremetal `json:"host_images"`
-	Ssh_public_keys []string    `json:"ssh_public_keys"`
+	Ssh_public_keys []string    `json:"public_ssh_keys"`
 	Status          string      `json:"status"`
 	Logs            []Log       `json:"logs"`
 }
