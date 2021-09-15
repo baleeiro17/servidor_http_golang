@@ -44,7 +44,7 @@ func GetReserva2() (models.Reserva, error) {
 
 	data.Result = make([]models.Result, 1)
 
-	data.Result[0].Id = "1"
+	data.Result[0].Id = "6140f082f9cb6b60fdb1a7a8"
 	data.Result[0].Status = "SCHEDULED"
 
 	// baremetal tasks
