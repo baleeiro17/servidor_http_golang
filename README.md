@@ -28,3 +28,8 @@ go build server.go
 ```
 http://localhost:8080
 ```
+6- Running with docker:
+```
+docker build -t portal .
+docker run -d -p 8080:8080 portal
+```
