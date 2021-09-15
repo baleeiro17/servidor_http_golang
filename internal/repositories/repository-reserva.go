@@ -16,8 +16,8 @@ func GetReserva() (models.Reserva, error) {
 
 	// baremetal tasks
 	data.Result[0].Host_images = make([]models.Baremetal, 1)
-	data.Result[0].Host_images[0].Host = "60f5b2e38298c5795c147e06"
-	data.Result[0].Host_images[0].Image = "60d22b62e8c38ebe76abfb38"
+	data.Result[0].Host_images[0].Host = "61318f4eec89f4b7b0428967"
+	data.Result[0].Host_images[0].Image = "6131382fec89f4b7b0428962"
 
 	// ssh tasks
 	data.Result[0].Ssh_public_keys = make([]string, 1)
@@ -48,11 +48,9 @@ func GetReserva2() (models.Reserva, error) {
 	data.Result[0].Status = "SCHEDULED"
 
 	// baremetal tasks
-	data.Result[0].Host_images = make([]models.Baremetal, 2)
-	data.Result[0].Host_images[0].Host = "60f5b2e38298c5795c147e04"
-	data.Result[0].Host_images[0].Image = "60d22b62e8c38ebe76abfb37"
-	data.Result[0].Host_images[1].Host = "60f5b2e38298c5795c147e03"
-	data.Result[0].Host_images[1].Image = "60d22b62e8c38ebe76abfb37"
+	data.Result[0].Host_images = make([]models.Baremetal, 1)
+	data.Result[0].Host_images[0].Host = "61318f4eec89f4b7b0428967"
+	data.Result[0].Host_images[0].Image = "6131382fec89f4b7b0428962"
 
 	// ssh tasks
 	data.Result[0].Ssh_public_keys = make([]string, 1)
